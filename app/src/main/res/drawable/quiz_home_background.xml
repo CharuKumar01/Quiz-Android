@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#4CAF50"
+                android:endColor="#8BC34A"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Center overlay circle (optional for focus effect) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#66FFFFFF" />
+        </shape>
+        <size
+            android:width="400dp"
+            android:height="400dp" />
+        <gravity android:gravity="center" />
+    </item>
+
+</layer-list>

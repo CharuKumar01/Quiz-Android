@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="game"
+    type="com.example.quiz.QuizFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".QuizFragment">
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toTopOf="@+id/questionText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="256dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.449"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/questionRadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:animateLayoutChanges="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionText">
+
+            <RadioButton
+                android:id="@+id/firstAnswerRadioBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{game.answers[0]}"
+                />
+
+            <RadioButton
+                android:id="@+id/secondAnswerRadioBtn"
+                android:layout_width="match_parent"
+                android:text="@{game.answers[1]}"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/thirdAnswerRadioBtn"
+                android:layout_width="match_parent"
+                android:text="@{game.answers[2]}"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/fourthAnswerRadioBtn"
+                android:layout_width="match_parent"
+                android:text="@{game.answers[3]}"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/next"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

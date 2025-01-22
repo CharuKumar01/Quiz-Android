@@ -405,6 +405,7 @@ class QuizFragment : Fragment() {
         val args = QuizFragmentArgs.fromBundle(requireArguments())
         val btnClicked = args.buttonClicked
 
+        // takes the argument and works accordingly
         when (btnClicked) {
             "scienceBtn" -> {
                 scienceQuestions.shuffle()

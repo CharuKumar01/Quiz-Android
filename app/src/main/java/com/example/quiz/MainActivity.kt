@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
         }
         val navController = this.findNavController(R.id.navHost)
 
-        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true){
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if(!navController.popBackStack()){
+                if (!navController.popBackStack()) {
                     //If no fragments in the back stack, exit the activity
                     finish()
                 }
@@ -38,12 +38,8 @@ class MainActivity : AppCompatActivity() {
 /*
 Offer a variety of quiz categories (e.g., Science, History, Sports, Entertainment). ✅
 Multiple Choice Questions (MCQs). ✅
-Fill-in-the-Blank.
 Add a countdown timer for each question or quiz to make it more challenging. ✅
 Award points for correct answers. ✅
 Shuffle questions to ensure no two quizzes feel the same. ✅
-Allow users to choose difficulty levels (easy, medium, hard).
-Increase difficulty as the quiz progresses.
-Display the correct answer if the user gets it wrong.
-Provide light and dark themes for better user experience.
+Display the correct answer if the user gets it wrong. ✅
  */

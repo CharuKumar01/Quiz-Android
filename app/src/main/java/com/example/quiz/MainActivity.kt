@@ -1,6 +1,7 @@
 package com.example.quiz
 
 import android.os.Bundle
+import android.view.Menu
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -25,11 +26,11 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.navHost)
 
         val backBtnDialog = AlertDialog.Builder(this)
-            .setTitle("Alert!")
+            .setTitle("Quiz")
             .setMessage("Are you sure?")
-            .setPositiveButton("Yes"){ _, _ ->
+            .setPositiveButton("Yes") { _, _ ->
                 finish()
-            }.setNegativeButton("No"){ dialog, _ ->
+            }.setNegativeButton("No") { dialog, _ ->
                 dialog.dismiss()
             }.create()
 
@@ -40,10 +41,8 @@ class MainActivity : AppCompatActivity() {
                     backBtnDialog.show()
                 }
             }
-
         })
     }
-
 }
 
 /*

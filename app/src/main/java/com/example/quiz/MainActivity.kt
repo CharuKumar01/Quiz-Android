@@ -13,7 +13,7 @@ import androidx.navigation.findNavController
 import com.example.quiz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var bind: ActivityMainBinding
+    private lateinit var bind: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
